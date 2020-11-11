@@ -1,0 +1,21 @@
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Last n Elements</title>
+</head>
+<script>
+var last =  function(a, n) {
+  if (a == null) 
+    return void 0;
+  if (n == null) 
+     return a[a.length - 1];
+  return a.slice(Math.max(a.length - n, 0));  
+  };
+Document.write("Pretyped Values in the array");
+document.write(last([7, 9, 0, -2]));
+document.write(last([7, 9, 0, -2],3));
+document.write(last([7, 9, 0, -2],6));
+</script>
+<body>
+</body>
+</html>
