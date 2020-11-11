@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Validator</title>
+</head>
+<script>
+function dobValidate(){
+var dob = Window.prompt("mm/dd/yyyy");
+var split_dob = dob_entry.split("/");
+var month = split_dob[0];
+var day = split_dob[1];
+var year = split_dob[2];
+var dob_asdate = new Date(year, month, day);
+var today = new Date();
+var mili_dif = Math.abs(today.getTime() - dob_asdate.getTime());
+var age = (mili_dif / (1000 * 3600 * 24 * 365.25));
+if(14<age && age<24){
+let val = "Eligible";
+alert("You are Eligible");
+} else {
+let val = "Ineligible";
+alert("You are ineliglible");
+}
+document.write("Age: " + age);
+document.write(" Eligibility: " + val);
+});
+</script>
+<body>
+<center><h2>Check Console</h2></center>
+</body>
+</html>
